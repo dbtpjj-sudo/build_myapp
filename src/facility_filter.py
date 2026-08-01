@@ -40,7 +40,7 @@ def get_target_facilities():
 
     # 学校マスタ読込
     df = pd.read_csv(
-        "school_master.csv",
+         "src/school_master.csv",
         dtype={"fc": str}
     )
 

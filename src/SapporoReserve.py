@@ -46,7 +46,7 @@ DISTRICTS = [
 
 def login(page):
     # ログインページへ直接移動（headlessでも確実）
-    page.goto("https://yoyaku.sapporo-sports.or.jp/web/login")
+    page.goto("https://www.sapporo-sports.or.jp/web/login")
 
     # ページロード待ち
     page.wait_for_load_state("networkidle")

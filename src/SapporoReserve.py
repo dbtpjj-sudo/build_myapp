@@ -37,7 +37,9 @@ DISTRICTS = [
 
 def login(page):
     page.goto("https://yoyaku.harp.lg.jp/sapporo/")
+    page.wait_for_load_state("networkidle")
     page.get_by_role("link", name="登録がお済みの方 ログイン").click()
+    # page.locator("text=ログイン").first.click()
     page.get_by_role("textbox", name="利用者番号").fill(USER_ID)
     page.get_by_role("textbox", name="パスワード").fill(PASSWORD)
     page.get_by_role("button", name="ログイン").click()

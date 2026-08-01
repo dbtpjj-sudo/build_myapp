@@ -17,7 +17,7 @@ WEEKDAY_MAP = {
 def get_target_facilities():
 
     # config読込
-    with open("config.json", encoding="utf-8") as f:
+    with open("src/config.json", encoding="utf-8") as f:
         config = json.load(f)
 
     # 今日の曜日

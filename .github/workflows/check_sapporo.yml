@@ -38,4 +38,4 @@ jobs:
         env:
           LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}
         run: |
-          python SapporoReserve.py
+          python src/SapporoReserve.py

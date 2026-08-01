@@ -35,30 +35,16 @@ DISTRICTS = [
 # ログイン
 # ==========================
 
-# def login(page):
-#     page.goto("https://yoyaku.harp.lg.jp/sapporo/")
-#     page.wait_for_load_state("networkidle")
-#     # page.get_by_role("link", name="登録がお済みの方 ログイン").click()
-#     page.locator("text=ログイン").first.click()
-#     page.get_by_role("textbox", name="利用者番号").fill(USER_ID)
-#     page.get_by_role("textbox", name="パスワード").fill(PASSWORD)
-#     page.get_by_role("button", name="ログイン").click()
-
 def login(page):
-    # ログインページへ直接移動（headlessでも確実）
-    page.goto("https://www.sapporo-sports.or.jp/web/login")
-
-    # ページロード待ち
+    # page.goto("https://yoyaku.harp.lg.jp/sapporo/")
+    page.goto("https://yoyaku.sapporo-sports.or.jp/")
     page.wait_for_load_state("networkidle")
-
-    # IDとパスワード入力
-    page.fill("#loginId", LOGIN_ID)
-    page.fill("#password", LOGIN_PASSWORD)
-
-    # ログインボタン押す
-    page.locator("button:has-text('ログイン')").click()
-
-
+    # page.get_by_role("link", name="登録がお済みの方 ログイン").click()
+    page.locator("text=ログイン").first.click()
+    page.get_by_role("textbox", name="利用者番号").fill(USER_ID)
+    page.get_by_role("textbox", name="パスワード").fill(PASSWORD)
+    # page.get_by_role("button", name="ログイン").click()
+    page.goto("https://yoyaku.sapporo-sports.or.jp/web/login")
 
 # ==========================
 # 空き情報

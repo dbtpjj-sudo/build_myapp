@@ -120,7 +120,7 @@ def main():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        login(page)
+        # login(page)
         
         # 全学校をチェック
         for facility in facilities:

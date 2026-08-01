@@ -9,7 +9,12 @@ name: Check Sapporo Facility Availability
 
 on:
   schedule:
-    - cron: "0 * * * *"   # 毎時0分に自動実行
+    - cron: "*/2 * * * *"
+        # */2 → 2分おき
+        # * → 毎時
+        # * → 毎日
+        # * → 毎月
+        # * → 全曜日
   workflow_dispatch:       # 手動実行も可能
 
 jobs:
